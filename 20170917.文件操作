@@ -25,7 +25,7 @@ os.rename(old, new)
 def countDirs(dp): 
   tt=tuple(os.walk(dp)) 
   print("文件夹"+dp+"的信息:") 
-  print("文件夹的个数: ",len(tt[0][1]),"文件的个数: ",len(tt[0][2])) 
+  print("文件夹的个数: ",len(tt[0][1]),"文件的个数: ",len(tt[0][2])) //计算文件个数的逻辑有问题，还需要重新修改
  
 d1="D:\\tomcat7\\bin" 
 countDirs(d1) 
