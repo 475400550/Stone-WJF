@@ -1,0 +1,31 @@
+#创建文件
+open(name[, mode[, buffering]]) -> file object
+
+#删除文件
+os.remove(path) or
+os.unlink(path)
+
+#查看当前目录文件
+os.listdir(path) -> list_of_strings
+
+#查看当前路径
+os.getcwd() -> path
+
+#创建目录
+os.mkdir(path)
+
+#拷贝文件
+import shutil
+shutil.copyfile(src, dst)
+
+#重命名文件
+os.rename(old, new)
+
+#查看某个文件夹下面的文件数量
+def countDirs(dp): 
+  tt=tuple(os.walk(dp)) 
+  print("文件夹"+dp+"的信息:") 
+  print("文件夹的个数: ",len(tt[0][1]),"文件的个数: ",len(tt[0][2])) 
+ 
+d1="D:\\tomcat7\\bin" 
+countDirs(d1) 
