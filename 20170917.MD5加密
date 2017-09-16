@@ -1,0 +1,5 @@
+import md5
+src = 'this is a md5 test.'
+ml = md5.new()
+ml.update(src.encode(encoding='utf-8'))
+print(ml.hexdigest())
