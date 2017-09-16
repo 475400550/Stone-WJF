@@ -1,4 +1,5 @@
 #coding=utf-8
+#原文链接：http://www.cnblogs.com/fnng/p/3576154.html
 import urllib
 import re
 
@@ -8,7 +9,7 @@ def getHtml(url):
     return html
 
 def getImg(html):
-    reg = r'src="(.+?\.jpg)"'
+    reg = r'src="(.+?\.jpg)"'   // 正则表达式
     imgre = re.compile(reg)
     imglist = re.findall(imgre,html)
     x = 0
