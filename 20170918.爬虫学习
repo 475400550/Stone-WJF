@@ -1,0 +1,12 @@
+#实例一. 模拟百度关键词
+
+import urllib
+data={}
+while True:
+    print "Please input word"
+    data['wd']=raw_input()
+    url_values=urllib.urlencode(data)
+    url = 'https://www.baidu.com/s?wd='
+    full_url = url+url_values
+    full_url = urllib.urlopen(full_url).read()
+    print full_url
