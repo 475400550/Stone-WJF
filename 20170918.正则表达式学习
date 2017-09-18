@@ -1,0 +1,15 @@
+#实例一.使用正则表达式提取网页URL的方法
+"""
+print输出中文乱码的原因：乱码产生的原因是Python在读取时默认解码方式是用操作系统编码,如果和保存时的编码方式不一样，就会出现乱码
+解决方法：输出时指定解码方法  print '是'.decode("utf8") ，必须和保存的编码一致
+"""
+#coding=gbk
+import  re
+import urllib
+url = 'http://www.jb51.net'
+s = urllib.urlopen(url).read()
+ss = s.replace(" ","")
+urls = re.findall(r"ahref=.*?\/a>",ss,re.I)
+for i in urls:
+    print i.decode("gbk")
+    
