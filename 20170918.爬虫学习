@@ -1,12 +1,40 @@
-#实例一. 模拟百度关键词
-
+#实例一. 模拟bing搜索关键词
+"""
+其实本来是想用baidu的但是百度好像做了屏蔽，无法爬到数据
+<html>
+<head>
+	<script>
+		location.replace(location.href.replace("https://","http://"));
+	</script>
+</head>
+<body>
+	<noscript><meta http-equiv="refresh" content="0;url=http://www.baidu.com/"></noscript>
+</body>
+</html>
+"""
 import urllib
 data={}
 while True:
     print "Please input word"
-    data['wd']=raw_input()
+    data['q']=raw_input()
     url_values=urllib.urlencode(data)
-    url = 'https://www.baidu.com/s?wd='
+    url = 'http://cn.bing.com/search?'
     full_url = url+url_values
     full_url = urllib.urlopen(full_url).read()
     print full_url
+    
+#实例二. 改进实例一，将结果输出到文件中
+import urllib
+data={}
+k = 1
+while True:
+    print"Please input Word:"
+    data['q']=raw_input()
+    url_values=urllib.urlencode(data)
+    url = 'http://cn.bing.com/search?'
+    full_url = url+url_values
+    full_url = urllib.urlopen(full_url).read()
+    f = open('%s.html'%url_values,mode='w')
+    f.write(full_url)
+    f.close()
+    print "Finised"
