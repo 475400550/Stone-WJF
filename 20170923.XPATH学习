@@ -1,1 +1,8 @@
+1. XPATH的主要作用：XPath 是一门在XML(也可以是HTML)文档中查找信息的语言。XPath可用来在XML(也可以是HTML)文档中对元素和属性进行遍历。
+HTML标签是一个树形结构，我们称这个为DOM树，XPATH匹配出其中的元素，相当于在树中查找子节点，因此效率相对正则表达式要高。
 
+2. HTML DOM学习(http://www.w3school.com.cn/htmldom/index.asp)
+  HTML DOM定义了访问和操作HTML文档的标准方法。
+  DOM将HTML文档表达为树结构。
+  
+3. 发现好像是要求懂得HTML，CSS？卧槽，打住吧，找本HTML书本看一下吧
