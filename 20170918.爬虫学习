@@ -4,7 +4,7 @@
 <html>
 <head>
 	<script>
-		location.replace(location.href.replace("https://","http://"));
+		location.replace(location.href.replace("https://","http://"));//20170923，发现这行好像就是报错信息啊，把https改为http即可
 	</script>
 </head>
 <body>
